@@ -1,0 +1,141 @@
+:root {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  color: #0f172a;
+  background: #f3f6fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  min-height: 100%;
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(760px, 100%);
+  background: #ffffff;
+  border: 1px solid #d9e2f1;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.panel-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.panel-header p {
+  margin: 8px 0 0;
+  color: #475569;
+}
+
+.add-row {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-row input {
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  padding: 0 12px;
+  font-size: 15px;
+}
+
+.add-row button,
+.task-list button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0 14px;
+  cursor: pointer;
+  background: #0ea5e9;
+  color: #ffffff;
+}
+
+.add-row button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.add-row button {
+  height: 40px;
+}
+
+.meta {
+  margin: 16px 0 8px;
+  color: #334155;
+}
+
+.db-path {
+  margin: 0 0 8px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+.loading {
+  margin: 0 0 8px;
+  color: #0ea5e9;
+}
+
+.error {
+  margin: 0 0 10px;
+  color: #dc2626;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.task-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #dbe5f2;
+  border-radius: 12px;
+  padding: 10px 12px;
+  gap: 12px;
+}
+
+.task-list li.done span {
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.task-list label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-extra {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-extra small {
+  color: #64748b;
+}
+
+.task-list .danger {
+  background: #ef4444;
+  height: 32px;
+}
